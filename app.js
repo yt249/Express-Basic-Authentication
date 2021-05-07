@@ -21,6 +21,10 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
+app.get('/register', (req, res) => {
+    res.render('register');
+});
+
 // Our requests handlers will be implemented here...
 
 app.listen(3000);
