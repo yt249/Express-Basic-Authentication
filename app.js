@@ -144,3 +144,18 @@ app.get('/protected', (req, res) => {
         });
     }
 });
+
+const requireAuth = (req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.render('login', {
+            message: 'Please login to continue',
+            messageClass: 'alert-danger'
+        });
+    }
+};
+
+app.get('/protected', requireAuth, (req, res) => {
+    res.render('protected');
+});
