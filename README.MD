@@ -1,4 +1,4 @@
-# Create Simple, Secure, and Stylish Node Apps with Express
+# Create basic authentication with Express
 
 ## ScreenShots 
 
